@@ -1,0 +1,51 @@
+
+2026-05-26 12:58:02,609: [DEBUG] --- 收到浏览器请求，开始执行后端 JDBC 与日志任务 ---
+
+2026-05-26 12:58:02,839: [DEBUG] jdbc_test表创建完毕
+
+2026-05-26 12:58:02,848: [DEBUG] 第1次插入返回1条结果
+
+2026-05-26 12:58:02,852: [DEBUG] 第2次插入返回1条结果
+
+2026-05-26 12:58:02,855: [DEBUG] 第3次插入返回1条结果
+
+2026-05-26 12:58:02,863: [DEBUG] ---数据库查询的结果----
+
+2026-05-26 12:58:02,864: [DEBUG] 查询记录: id=1, name=tom
+
+2026-05-26 12:58:02,864: [DEBUG] 查询记录: id=2, name=张三
+
+2026-05-26 12:58:02,864: [DEBUG] 查询记录: id=3, name=999
+
+2026-05-26 12:58:02,864: [INFO] 尝试执行一段必定报错的代码，用于测试异常日志记录...
+
+2026-05-26 12:58:02,865: [ERROR] 【系统异常拦截】运算错误，已成功保存异常堆栈到文件中！
+java.lang.ArithmeticException: / by zero
+	at com.mingrisoft.web.DatabaseServlet.doGet(DatabaseServlet.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-05-26 12:58:02,877: [DEBUG] --- JDBC 资源已安全释放 ---
+
+2026-05-26 12:59:43,856: [DEBUG] --- 开始执行 JDBC 任务 ---
+
+2026-05-26 12:59:45,595: [DEBUG] --- 开始执行 JDBC 任务 ---
